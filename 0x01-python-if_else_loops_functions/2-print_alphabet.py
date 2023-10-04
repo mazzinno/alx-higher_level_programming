@@ -1,4 +1,6 @@
-i = 97
+#!/usr/bin/python3
+n = 97
 for i in range(97, 122):
-    char = chr(i)
-    print(char)
+    c = chr(n)
+    print(f"{c}",end="")
+    n += 1
