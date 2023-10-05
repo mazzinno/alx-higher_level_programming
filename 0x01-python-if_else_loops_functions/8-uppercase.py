@@ -4,8 +4,8 @@ def uppercase(str):
     n = 0
     while n < len(str):
         if str[ord(i)] < 91:
-            print(str[i])
+            print("{}".format(str[i]))
             i += 1
         elif str[(i)] > 91:
-            print(str[i])
+            print("{}".format(str[i]))
             i += 1
