@@ -7,5 +7,5 @@ def uppercase(str):
             print("{}".format(str[i]), end="")
             i += 1
         elif ord(str[i]) > 91:
-            print("{}".format(str[i]), end="")
+            print("{}".format(ord(str[i] + 32)), end="")
             i += 1
