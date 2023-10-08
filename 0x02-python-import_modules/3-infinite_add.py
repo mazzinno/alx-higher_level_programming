@@ -5,6 +5,6 @@ if argc > 0:
     sum = 0
     for n in range(1, argc + 1):
         sum += int(argv[n])
-    print(sum)
+    print("{:d}".format(sum))
 else:
     print("0")
