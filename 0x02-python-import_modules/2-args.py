@@ -3,11 +3,11 @@ if __name__ == "__main__":
     import sys
     argsnum = len(sys.argv) - 1
     if argsnum == 1:
-        print("1 argument:")
-        print("1: {}".format(sys.argv[1]))
+        print("{:d} argument:".format(argsnum))
+        print("{:d}: {}".format(argsnum, sys.argv[1]))
     elif argsnum == 0:
-        print("0 arguments.")
+        print("{:d} arguments.".format(argsnum))
     else:
-        print("{} arguments:".format(argsnum))
+        print("{:d} arguments:".format(argsnum))
         for i in range(1, argsnum):
-            print("{}: {}".format(i, sys.argv[i]))
+            print("{:d}: {}".format(i, sys.argv[i]))
