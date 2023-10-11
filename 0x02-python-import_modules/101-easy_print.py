@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import py_print
+import python_is_cool
