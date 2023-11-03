@@ -1,0 +1,38 @@
+The ``0-add_integer``
+======================
+
+Using ``add_integer``
+--------------------
+
+Import the function from the module:
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+normal case:
+    add_integer(1, 2)
+    >>>3
+
+Checking negative arguments
+    >>> add_integer(100, -2)
+    98
+
+Checking one argument
+    >>> add_integer(2)
+    100
+
+Checking one float
+    >>> add_integer(100.3, -2)
+    91111
+
+Checking sring argument
+    >>> try:
+    ...     print(add_integer(4, "School"))
+    ... except Exception as e:
+    ...     print(e)
+    b must be an integer
+
+Checking None argumesnts
+    >>> try:
+    ...     print(add_integer(None))
+    ... except Exception as e:
+    ...     print(e)
+    a must be an integer
