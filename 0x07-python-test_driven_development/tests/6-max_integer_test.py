@@ -4,40 +4,57 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-
 class TestMaxInteger(unittest.TestCase):
-    """Unittest for max_integer([..])"""
-    def test_regular(self):
-        """Unittest for max_integer([..])"""
-        test_m = [2, 96, 10, 8, 10]
-        self.assertEqual(max_integer(test_m), 56)
+    """Define unittests for max_integer([..])."""
 
-    def test_only_floats(self):
-        """Test for list with only float"""
-        test_m = [1.35, 25.56, 5.00501, 8.424, 5.63]
-        self.assertEqual(max_integer(test_m), 34.56)
+    def test_ordered_list(self):
+        """Test an ordered list of integers."""
+        ordered = [1, 2, 3, 4]
+        self.assertEqual(max_integer(ordered), 4)
 
-    def test_floats_and_ints(self):
-        """Test for list with float and int"""
-        test_m = [1000, 104.98, 5.00501, 665, 5.634]
-        self.assertEqual(max_integer(test_m), 1000)
+    def test_unordered_list(self):
+        """Test an unordered list of integers."""
+        unordered = [1, 2, 4, 3]
+        self.assertEqual(max_integer(unordered), 4)
 
-    def test_all_equal(self):
-        """Test for list with equal values"""
-        test_m = [52, 52, 52, 52, 52]
-        self.assertEqual(max_integer(test_m), 124)
+    def test_max_at_begginning(self):
+        """Test a list with a beginning max value."""
+        max_at_beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(max_at_beginning), 4)
 
-    def test_positive_negative(self):
-        """Test for list with positive and negative values"""
-        test_m = [52, -985, -1000, 30, 527]
-        self.assertEqual(max_integer(test_m), 999)
+    def test_empty_list(self):
+        """Test an empty list."""
+        empty = []
+        self.assertEqual(max_integer(empty), None)
 
-    def test_long_floats(self):
-        """Test for list of long floats"""
-        test_m = [
-                5.343434525343, .6,51515615151, 60.555555553530593535,
-                4.4548456123123155523325, 2.323222454345342232]
-        self.assertEqual(max_integer(test_m), 43.55456453240593535)
+    def test_one_element_list(self):
+        """Test a list with a single element."""
+        one_element = [7]
+        self.assertEqual(max_integer(one_element), 7)
 
-if __name__ == "__main__":
+    def test_floats(self):
+        """Test a list of floats."""
+        floats = [1.53, 6.33, -9.123, 15.2, 6.0]
+        self.assertEqual(max_integer(floats), 15.2)
+
+    def test_ints_and_floats(self):
+        """Test a list of ints and floats."""
+        ints_and_floats = [1.53, 15.5, -9, 15, 6]
+        self.assertEqual(max_integer(ints_and_floats), 15.5)
+
+    def test_string(self):
+        """Test a string."""
+        string = "Brennan"
+        self.assertEqual(max_integer(string), 'r')
+
+    def test_list_of_strings(self):
+        """Test a list of strings."""
+        strings = ["Brennan", "is", "my", "name"]
+        self.assertEqual(max_integer(strings), "name")
+
+    def test_empty_string(self):
+        """Test an empty string."""
+        self.assertEqual(max_integer(""), None)
+
+if __name__ == '__main__':
     unittest.main()
