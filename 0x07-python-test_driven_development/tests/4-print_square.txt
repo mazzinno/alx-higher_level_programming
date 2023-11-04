@@ -1,0 +1,35 @@
+The ``4-print_square``
+======================
+
+Using ``print_square``
+--------------------
+
+Import the function from the module:
+    >>> print_square = __import__("4-print_square").print_square
+
+Checking for positives
+        >>> print_square(3)
+        ###
+        ###
+        ###
+
+Cheking negative number
+        >>> try:
+        ...     print_square(-5)
+        ... except Exception as e:
+        ...     print(e)
+        size must be >= 0
+
+Checking if size is a string
+        >>> try:
+        ...     print_square("test")
+        ... except Exception as e:
+        ...     print(e)
+        size must be an integer
+
+Checking if size is a float
+        >>> try:
+        ...     print_square(5.4)
+        ... except Exception as e:
+        ...     print(e)
+        size must be an integer
