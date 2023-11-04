@@ -1,0 +1,41 @@
+===================================================
+Tests for text_indentation in 2-matrix_divided.py
+===================================================
+
+Import the function from the module:
+        >>> matrix_divided = __import__ ('2-matrix_divided').matrix_divided
+
+Checking regular division
+        >>> matrix = [[2, 5, 7], [8, 4, 2]]
+        >>> matrix_divided(matrix, 3)
+        [[0.67, 1.67, 2.33], [2.67, 1.33, 0.67]]
+        >>> matrix
+        [[2, 5, 7], [8, 4, 2]]
+
+Checking regular division with div negative
+        >>> matrix = [[2, 5, 7], [8, 4, 2]]
+        >>> matrix_divided(matrix, -3)
+        [[-0.67, -1.67, -2.33], [-2.67, -1.33, -0.67]]
+        >>> matrix
+        [[2, 5, 7], [8, 4, 2]]
+
+Checking mix of ints and floats
+        >>> matrix = [[2, 5.67, 7], [8, 4.6, 2]]
+        >>> matrix_divided(matrix, 3)
+        [[0.67, 1.89, 2.33], [2.67, 1.53, 0.67]]
+        >>> matrix
+        [[2, 5.67, 7], [8, 4.6, 2]]
+
+Checking div is None
+        >>> matrix = [[2, 5, 7], [8, 4, 2]]
+        >>> matrix_divided(matrix, None)
+        Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+
+Checking one argument
+        >>> matrix = [[2, 5, 7], [8, 4, 2]]
+        >>> matrix_divided(matrix)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix_divided() missing 1 required positional argument: 'div'
