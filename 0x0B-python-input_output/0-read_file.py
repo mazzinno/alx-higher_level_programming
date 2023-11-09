@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-'''
-Write a function that reads a text file (UTF8)
-and prints it to stdout
-'''
+"""read_file method"""
 
 
 def read_file(filename=""):
-    with open(filename, 'r', encoding='utf-8') as f:
-        for line in f:
-            print(line, end='')
-    f.close()
+    """
+    Method that reads and prints a text file (UTF8)
+    """
+    with open(filename) as my_file_0:
+        content = my_file_0.read()
+        print(content)
