@@ -4,6 +4,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    '''Represent a Rectangle class.'''
+
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Initialize a new Rectangle.
 
@@ -24,6 +26,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        '''Set/Get the width of rectangle.'''
         return self.__width
 
     @width.setter
@@ -36,6 +39,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        '''Set/Get the height of rectangle.'''
         return self.__height
 
     @width.setter
@@ -48,6 +52,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        '''Set/Get the x coordinates of rectangle.'''
         return self.__x
 
     @x.setter
@@ -60,6 +65,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        '''Set/Get the y coordinates of rectangle.'''
         return self.__y
 
     @y.setter
