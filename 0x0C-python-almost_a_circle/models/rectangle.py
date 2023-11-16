@@ -17,12 +17,13 @@ class Rectangle(Base):
            id (int): The identity of the rectangle.
         Raises:
            TypeError: If the input is not an integer.
-           ValueError: If width/height is <= 0.'''
-        super().__init__(id)
+           ValueError: If width/height is <= 0.
+        '''
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
