@@ -19,10 +19,10 @@ class Rectangle(Base):
            TypeError: If the input is not an integer.
            ValueError: If width/height is <= 0.
         '''
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -34,7 +34,7 @@ class Rectangle(Base):
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError('width must be an integer')
-        if value < 0:
+        if value <= 0:
             raise ValueError('width must be > 0')
         self.__width = value
 
@@ -47,7 +47,7 @@ class Rectangle(Base):
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
-        if value < 0:
+        if value <= 0:
             raise ValueError('height must be > 0')
         self.__height = value
 
