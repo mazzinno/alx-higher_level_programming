@@ -81,10 +81,20 @@ class Rectangle(Base):
         '''calcultaes the area'''
         return (self.width * self.height)
 
+
     def display(self):
-        '''tikchbila tiwliwla'''
-        for i in range(self.height):
-            print('#' * self.width)
+        '''
+        Prints Rectangle to
+        console with #
+        '''
+        for col in range(self.y):
+            print()
+        for y_axis in range(self.height):
+            for x_axis in range(self.x):
+                print(' ', end='')
+            for row in range(self.width):
+                print('#', end='')
+            print()
 
     def __str__(self):
         '''overriding the __str__ method'''
