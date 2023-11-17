@@ -84,5 +84,4 @@ class Rectangle(Base):
     def display(self):
         '''tikchbila tiwliwla'''
         for i in range(self.height):
-            for i in range(self.width):
-                print("#", end=" ")
+            print('#' * self.width)
