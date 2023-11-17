@@ -81,7 +81,6 @@ class Rectangle(Base):
         '''calcultaes the area'''
         return (self.width * self.height)
 
-
     def display(self):
         '''
         Prints Rectangle to
