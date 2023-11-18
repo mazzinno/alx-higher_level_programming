@@ -11,4 +11,4 @@ class Square(Rectangle):
 
     def __str__(self):
         '''printing method'''
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size))
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
