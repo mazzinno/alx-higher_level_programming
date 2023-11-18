@@ -1,20 +1,24 @@
 #!/usr/bin/python3
-'''
-Write the class Square that inherits from Rectangle
-'''
+'''Define the class Square.'''
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    '''
-    Class Square inherits from Rectangle
-    '''
+    '''Represent Square class.'''
+
     def __init__(self, size, x=0, y=0, id=None):
+        '''Initialize the new Square object.
+
+        Args:
+           size (int): The size of the square.
+           x (int): The x coordinate of the square.
+           y (int): The y coordinate of the square.
+           id (int): The identity of the square.
+        '''
         super().__init__(size, size, x, y, id)
-        self.size = size
 
     def __str__(self):
-        '''
-        printing method
-        '''
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        '''Return [Square] (<id>) <x>/<y> - <size> format.'''
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x, self.y,
+                                                 self.height)
