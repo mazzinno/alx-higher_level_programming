@@ -25,7 +25,7 @@ class Base():
 
     def to_json_string(list_dictionaries):
         '''fkhater ga3 li ma3ndo khater'''
-        if list_dictionaries:
-            return json.dumps(list_dictionaries)
-        else:
+        if list_dictionaries is None:
             return []
+        else:
+            return json.dumps(list_dictionaries)
