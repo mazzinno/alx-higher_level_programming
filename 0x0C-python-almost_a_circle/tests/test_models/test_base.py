@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-# base_test.py
-'''Defines unittests for base.py.
+# test_base.py
+"""Defines unittests for base.py.
 
 Unittest classes:
-    TestBase_instantiation.
-    TestBase_to_json_string.
-    TestBase_save_to_file.
-    TestBase_from_json_string.
-    TestBase_create.
-    TestBase_load_from_file.
-    TestBase_save_to_file_csv.
-    TestBase_load_from_file_csv.
-'''
+    TestBase_instantiation - line 23
+    TestBase_to_json_string - line 110
+    TestBase_save_to_file - line 156
+    TestBase_from_json_string - line 234
+    TestBase_create - line 288
+    TestBase_load_from_file - line 340
+    TestBase_save_to_file_csv - line 406
+    TestBase_load_from_file_csv - line 484
+"""
 import os
 import unittest
 from models.base import Base
@@ -20,7 +20,7 @@ from models.square import Square
 
 
 class TestBase_instantiation(unittest.TestCase):
-    '''Unittests for testing instantiation of the Base class.'''
+    """Unittests for testing instantiation of the Base class."""
 
     def test_no_arg(self):
         b1 = Base()
@@ -32,6 +32,11 @@ class TestBase_instantiation(unittest.TestCase):
         b2 = Base()
         b3 = Base()
         self.assertEqual(b1.id, b3.id - 2)
+
+    def test_None_id(self):
+        b1 = Base(None)
+        b2 = Base(None)
+        self.assertEqual(b1.id, b2.id - 1)
 
     def test_unique_id(self):
         self.assertEqual(12, Base(12).id)
@@ -268,7 +273,7 @@ class TestBase_from_json_string(unittest.TestCase):
         self.assertEqual([], Base.from_json_string(None))
 
     def test_from_json_string_empty_list(self):
-        self.assertEqual([], Base.from_json_string('[]'))
+        self.assertEqual([], Base.from_json_string("[]"))
 
     def test_from_json_string_no_args(self):
         with self.assertRaises(TypeError):
@@ -539,7 +544,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()

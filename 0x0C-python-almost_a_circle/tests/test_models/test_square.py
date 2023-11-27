@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 # test_square.py
-'''Defines unittests for models/square.py.
+"""Defines unittests for models/square.py.
 
 Unittest classes:
-    TestSquare_instantiation.
-    TestSquare_size.
-    TestSquare_x.
-    TestSquare_y.
-    TestSquare_order_of_initialization.
-    TestSquare_area.
-    TestSquare_stdout.
-    TestSquare_update_args.
-    TestSquare_update_kwargs.
-    TestSquare_to_dictionary.
-'''
+    TestSquare_instantiation - line 24
+    TestSquare_size - line 88
+    TestSquare_x - line 166
+    TestSquare_y - line 238
+    TestSquare_order_of_initialization - line 306
+    TestSquare_area - line 322
+    TestSquare_stdout - line 343
+    TestSquare_update_args - line 426
+    TestSquare_update_kwargs - line 538
+    TestSquare_to_dictionary - 640
+"""
 import io
 import sys
 import unittest
@@ -340,11 +340,11 @@ class TestSquare_area(unittest.TestCase):
 
 
 class TestSquare_stdout(unittest.TestCase):
-    """Unittests for testing __str__ and display methods of Square class."""
+    """Unittests methods of Square class."""
 
     @staticmethod
     def capture_stdout(sq, method):
-        """Captures and returns text printed to stdout.
+        """Captures anns text printed to stdout.
 
         Args:
             sq (Square): The Square ot print to stdout.
@@ -423,7 +423,7 @@ class TestSquare_stdout(unittest.TestCase):
 
 
 class TestSquare_update_args(unittest.TestCase):
-    """Unittests for testing update args method of the Square class."""
+    """Unittests for testing are class."""
 
     def test_update_args_zero(self):
         s = Square(10, 10, 10, 10)
@@ -654,7 +654,6 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
-
 
 if __name__ == "__main__":
     unittest.main()
