@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-'''
-Script that fetches a website
-'''
-import requests
+'''task5'''
 
 if __name__ == "__main__":
-    url = requests.get('https://intranet.hbtn.io/status')
+    import requests
+    url = "https://alx-intranet.hbtn.io/status"
+    response = requests.get(url)
     print('Body response:')
-    print('\t- type: {}'.format(type(url.text)))
-    print('\t- content: {}'.format(url.text))
+    print(f'\t- type: {type(response.text)}')
+    print(f'\t- content: {response.text}')
