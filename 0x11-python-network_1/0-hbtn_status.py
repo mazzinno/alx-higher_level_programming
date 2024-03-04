@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-'''
-Script that fetches website
-'''
-from urllib import request
+'''task 0'''
 
-url = 'https://intranet.hbtn.io/status'
-with request.urlopen(url) as response:
-    the_page = response.read()
-    print('Body response:')
-    print('\t- type: {}'.format(type(the_page)))
-    print('\t- content: {}'.format(the_page))
-    print('\t- utf8 content: {}'.format(the_page.decode('utf-8')))
+if __name__ == "__main__":
+    import urllib.request
+    req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
+    with urllib.request.urlopen(req) as r:
+        response = r.read()
+        print('Body response:')
+        print(f'\t- type: {type(response)}')
+        print(f'\t- content: {response}')
+        print(f'\t- utf8 content: {response.decode("utf-8")}')
