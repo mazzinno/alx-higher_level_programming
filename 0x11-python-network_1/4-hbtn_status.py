@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 '''
-Script that takes in a URL, sends a request to the URL and
-displays the body of the response (decoded in utf-8)
+Script that fetches a website
 '''
+import requests
 
 if __name__ == "__main__":
-    import requests
-    r = requests.get('https://alx-intranet.hbtn.io/status')
+    url = requests.get('https://intranet.hbtn.io/status')
     print('Body response:')
-    print('\t- type: {}'.format(type(r)))
-    print('\t- content: {}'.format(r.text))
+    print('\t- type: {}'.format(type(url.text)))
+    print('\t- content: {}'.format(url.text))
