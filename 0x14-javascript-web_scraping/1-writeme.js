@@ -1,12 +1,9 @@
 #!/usr/bin/node
-const fs = require('fs');
-// The string to write to the file
-const content = process.argv[3];
-// Path to the file
-const filePath = process.argv[2];;
-// Write the string to the file asynchronously
-fs.writeFile(filePath, content, 'utf8', (err) => {
-    if (err) {
-        console.error(err);
-    }
+const FS = require('fs');
+const FILE_PATH = process.argv[2];
+const STR = process.argv[3];
+FS.writeFile(FILE_PATH, STR, 'utf8', function (err) {
+  if (err) {
+    console.error(err);
+  }
 });
